@@ -10,7 +10,7 @@ export const metadata =
 
 export default function DashboardPage() //default function to call when opening a webpage
 {
-    const isAuthenticated = false
+    const isAuthenticated = true
     let children = (
         <Login />
     )

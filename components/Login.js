@@ -11,11 +11,12 @@ export default function Login() {
         <span className = {'py-1 headgradient '}>Login / Register</span>
         <p className = {'text-sm sm:text-lg md:text-2xl '}>You're one step away</p>
       </h3>
-      <input/>
-      <input/>
-      <div className = {'w-full max-w-[200px] '}>
+      <input className= {'text-black w-full max-w-[275px] border-2 border-blue-200 mx-auto px-3 py-2 sm:py-3 hover:border-amber-600 focus:border-amber-600 rounded-full outline-none '} placeholder='E-mail ' />
+      <input className= {'text-black w-full max-w-[275px] border-2 border-blue-200 mx-auto px-3 py-2 sm:py-3 hover:border-amber-600 focus:border-amber-600 rounded-full outline-none '} placeholder='Password ' type='Password' />
+      <div className = {'w-full max-w-[250px] '}>
         <Button text="Login" dark full></Button>
       </div>
+      <p className = {'text-center '}>Don't have an account? <span className = {'text-amber-600 '}>Sign Up</span></p>
     </div>
   )
 }
