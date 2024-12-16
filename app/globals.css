@@ -9,7 +9,7 @@
     -webkit-text-fill-color: transparent;
 }
 .textgradient {
-    background: -webkit-linear-gradient(#ff0000, #ff991d);
+    background: -webkit-linear-gradient(#6a20ff, #1eb1e2);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -17,4 +17,13 @@
 
 .backgroundColor{
     background: -webkit-linear-gradient(#323232, #000000);
+}
+
+.backgroundColor2{
+    background: -webkit-linear-gradient(#8605db, #2d67e4);
+}
+
+.button1:hover{
+    transform-origin: bottom;
+    transform: skewX(-3deg);
 }

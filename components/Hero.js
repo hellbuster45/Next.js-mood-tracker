@@ -9,11 +9,11 @@ const opensans = Open_Sans({subsets : ["latin"], weight: ['400']});
 export default function Hero() {
   return (
     <div className = {'py-10 md:py-10 flex flex-col gap-4 sm:gap-8 ' + fugaz.className}>
-      <h1 className = {'text-4xl sm-text-text-6xl md:text-7xl text-center border-2' }>
+      <h1 className = {'text-4xl sm-text-text-6xl md:text-7xl text-center' }>
         Yo me is practicing <span className= {'textgradient '}>yeaaaaaaaaa!!</span>
       </h1>
 
-      <p className = {'text-center text-lg sm:text-xl md:text-2xl w-full mx-auto max-w-[800px] border-2 ' + opensans.className}>
+      <p className = {'text-center text-lg sm:text-xl md:text-2xl w-full mx-auto max-w-[800px] ' + opensans.className}>
         less <span className = {'font-semibold '}>get itt!!!</span>
       </p>
 
@@ -22,7 +22,7 @@ export default function Hero() {
         <Button text = "Login" dark/>
       </div>
 
-      <Calendar/>
+      <Calendar demo/>
     </div>
   )
 }
