@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { AuthProvider } from "@/context/AuthContext";
 import Head from "./Head";
+import Logout from "@/components/Logout";
 
 const fugaz = Fugaz_One({subsets : ["latin"], weight: ['400']});
 const inter = Inter({subsets : ["latin"]});
@@ -16,12 +17,15 @@ export const metadata = {
 // i.e. anything written before or after {children} (inside body) will remain constant for all subdirectory pages
 export default function RootLayout({ children }) {
   const header = (
-    <header className = 'p-4 sm:p-8 flex text-xl sm:text-2xl md:text-4xl justify-between gap-4 headgradient '>
+    <header className = 'place-items-center p-4 sm:py-5 flex text-xl sm:text-2xl md:text-4xl justify-between gap-4 '>
       <Link href='/'>
-        <h1 className= {' ' + fugaz.className}>
+        <h1 className= {'headgradient p-1 ' + fugaz.className}>
           my App :D
         </h1>
       </Link>
+      <div className = {'text-xs sm:text-sm md:text-lg'}>
+        <Logout />
+      </div>
     </header>
   )
 

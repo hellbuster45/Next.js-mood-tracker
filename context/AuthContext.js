@@ -1,6 +1,6 @@
 'use client'
 import { auth, db } from "@/firebase"
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
 import { doc, getDoc } from "firebase/firestore"
 import React, { useContext, useState, useEffect } from "react"
 
@@ -24,7 +24,7 @@ export function AuthProvider({children}){
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    function signOut(){
+    function logout(){
         setUserDataObj(null)
         setCurrentUser(null)
         return signOut(auth)
@@ -70,7 +70,7 @@ export function AuthProvider({children}){
         userDataObj,
         setUserDataObj,
         signup,
-        signOut,
+        logout,
         login,
         loading
     }
