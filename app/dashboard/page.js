@@ -1,6 +1,8 @@
 import Dashboard from "@/components/Dashboard";
+import Loading from "@/components/Loading";
 import Login from "@/components/Login";
 import Main from "@/components/Main";
+import { useAuth } from "@/context/AuthContext";
 
 // page title
 export const metadata = 
@@ -10,19 +12,9 @@ export const metadata =
 
 export default function DashboardPage() //default function to call when opening a webpage
 {
-    const isAuthenticated = true
-    let children = (
-        <Login />
-    )
-
-    if(isAuthenticated)
-    {
-        children = (<Dashboard/>)
-    }
-
     return(
         <Main>
-            {children}
+            <Dashboard />
         </Main>
     );
 }

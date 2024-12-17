@@ -4,10 +4,9 @@ import {Fugaz_One, Inter} from "next/font/google";
 const fugaz = Fugaz_One({subsets : ["latin"], weight: ['400'], display: "swap"});
 
 export default function Button(prop) {
-    const {text, dark, full} = prop;
+    const { text, dark, full, clickHandler } = prop;
   return (
-    <button className = {
-        'rounded-full overflow-hidden border-2 duration-200 hover:opacity-60 border-solid border-indigo-600 ' + 
+    <button onClick={clickHandler} className = {'rounded-full overflow-hidden border-2 border-indigo-600 duration-200 hover:opacity-60 ' + 
         (dark ? 'text-white bg-indigo-600 ' : 'text-indigo-600 ') + 
         (full ? 'grid place-items-center w-full ' : ' ')}>
 

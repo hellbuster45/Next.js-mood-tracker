@@ -1,6 +1,8 @@
 import {Fugaz_One, Inter} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { AuthProvider } from "@/context/AuthContext";
+import Head from "./Head";
 
 const fugaz = Fugaz_One({subsets : ["latin"], weight: ['400']});
 const inter = Inter({subsets : ["latin"]});
@@ -17,12 +19,9 @@ export default function RootLayout({ children }) {
     <header className = 'p-4 sm:p-8 flex text-xl sm:text-2xl md:text-4xl justify-between gap-4 headgradient '>
       <Link href='/'>
         <h1 className= {' ' + fugaz.className}>
-          Header
+          my App :D
         </h1>
       </Link>
-      <div className = {'flex items-center justify-between '}>
-        PLACEHOLDER
-      </div>
     </header>
   )
 
@@ -36,11 +35,14 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className = {'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-750 backgroundColor text-white ' + inter.className}>
-        {header}
-          {children}
-        {footer}
-      </body>
+      <Head/>
+      <AuthProvider>
+        <body className = {'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-750 backgroundColor text-white ' + inter.className}>
+          {header}
+            {children}
+          {footer}
+        </body>
+      </AuthProvider>
     </html>
   );
 }
