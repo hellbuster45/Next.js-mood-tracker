@@ -37,7 +37,7 @@ export default function Login() {
     <div className = {'flex flex-col flex-1 justify-center gap-4 place-items-center w-full '}>
       <h3 className = {'px-5 py-5 gap-5 flex flex-col text-xl sm:text-2xl md:text-3xl place-items-center ' + fugaz.className}>
         <span className = {'py-1 headgradient '}>{isRegister ? 'Register' : 'Login'}</span>
-        <p className = {'text-sm sm:text-lg md:text-2xl '}>You're one step away</p>
+        <p className = {'text-sm sm:text-lg md:text-2xl '}>You&#39;re one step away</p>
       </h3>
 
       <input value={email} onChange={(e) => {
