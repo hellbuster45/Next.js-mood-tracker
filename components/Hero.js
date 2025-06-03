@@ -12,11 +12,11 @@ export default function Hero() {
   return (
     <div className = {'py-10 md:py-10 flex flex-col gap-8 sm:gap-10 ' + fugaz.className}>
       <h1 className = {'text-4xl sm-text-text-6xl md:text-7xl text-center' }>
-        Yo me is practicing <span className= {'textgradient '}>yeaaaaaaaaa!!</span>
+        Track your <span className= {'textgradient '}>daily</span> mood!
       </h1>
 
       <p className = {'text-center text-lg sm:text-xl md:text-2xl w-full mx-auto max-w-[800px] ' + opensans.className}>
-        less <span className = {'font-semibold '}>get itt!!!</span>
+        See how you <span className = {'font-semibold '}>feel</span> everyday..!
       </p>
 
       <CallToAction/>

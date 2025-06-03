@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <header className = 'place-items-center p-4 sm:py-5 flex text-xl sm:text-2xl md:text-4xl justify-between gap-4 '>
       <Link href='/'>
         <h1 className= {'headgradient p-1 ' + fugaz.className}>
-          my App :D
+          Mood Tracker
         </h1>
       </Link>
       <div className = {'text-xs sm:text-sm md:text-lg'}>
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
   const footer = (
     <footer className = 'p-4 sm:p-8 flex justify-center gap-4 '>
       <h1 className= {' ' + fugaz.className}>
-        lol me made it :D
+        Made with Love, by me :D
       </h1>
     </footer>
   )
